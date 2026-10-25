@@ -1,0 +1,14 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:foodlink/main.dart';
+
+void main() {
+  testWidgets('FoodLink app loads', (WidgetTester tester) async {
+    tester.binding;
+
+    // Initialize the widget tree without running Firebase-dependent
+    // authentication services.
+    await tester.pumpWidget(
+      const FoodLinkApp(),
+    );
+  });
+}
